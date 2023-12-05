@@ -1,6 +1,6 @@
 # À propos
 
-Ce _repository_ contient un dépôt pour l'évaluation des cours de TEI et d'XSLT dispensés à l'École nationale des chartes.
+Ce _repository_ contient un dépôt pour l'évaluation des cours de TEI et d'XSLT dispensés en deuxième année de Master TNAH à l'École nationale des chartes.
 
 ## Détail du contenu
 
