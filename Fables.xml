@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Édition numérique de trois fables choisies de Jean de La Fontaine</title>
+            <respStmt>
+               <resp>Encodé en XML-TEI par</resp>
+               <persName>Natacha Grim</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Claude Barbin</publisher>
+            <pubPlace>
+               <address>
+                  <country>France</country>
+                  <settlement type="ville">Paris</settlement>
+               </address>
+            </pubPlace>
+            <date when-iso="1668">1668</date>
+            <distributor facs="https://gallica.bnf.fr/ark:/12148/btv1b8610825d/f1">Bibliothèque nationale de France</distributor>
+            <availability>
+               <licence target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica">Domaine public</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Fables choisies , mises en vers par M. de La Fontaine</title>
+               <author>La Fontaine, Jean de (1621-1695)</author>
+               <date when="1668">1668</date>
+               <biblScope unit="page" from="7" to="12">7-12</biblScope>
+            </bibl>
+            <msDesc>
+               <msIdentifier>
+                  <country>France</country>
+                  <settlement>Paris</settlement>
+                  <institution>Bibliothèque nationale de France</institution>
+                  <idno>ark:/12148/btv1b8610825d</idno>
+               </msIdentifier>
+            </msDesc>
+            
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+
+  <text>
+      <body>
+         <pb n="7"/>
+         <div type="fable">
+            <head rend="alignCenter">FABLE <choice><orig>TROISIESME</orig><reg>TROISIÈME</reg></choice>.<lb/>
+               <emph>La <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> qui se veut faire aussi<lb/>grosse que le Bœuf.</emph>
+            </head>
+            <lg rhyme="abab">
+               <l rend="indent">Une <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> <choice><orig>vid</orig><reg>vit</reg></choice> un Bœuf,</l>
+               <l rend="indent">Qui <choice><orig>luy</orig><reg>lui</reg></choice> sembla de belle taille.</l>
+               <l>Elle qui n’<choice><orig>estoit</orig><reg>était</reg></choice> pas grosse en tout comme un œuf,</l>
+               <l>Envieuse s’<choice><orig>estend</orig><reg>étend</reg></choice>, <choice><orig>&amp;</orig><reg>et</reg></choice> s’enfle, <choice><orig>&amp;</orig><reg>et</reg></choice> se travaille,</l>
+            </lg>
+            <lg rhyme="aa">
+               <l rend="indent">Pour égaler l’animal en grosseur ;</l>
+               <l rend="indent">Disant, Regardez bien ma sœur,</l>
+            </lg>   
+            <lg rhyme="abab">
+               <l>Est-ce assez ? Dites-<choice><orig>moy</orig><reg>moi</reg></choice> : N’y suis-je point encore ?</l>
+               <l><choice><orig>Nenny</orig><reg>Nenni</reg></choice>. M’y <choice><orig>voicy</orig><reg>voici</reg></choice> donc ? Point du tout. M’y <choice><orig>voila</orig><reg>voilà</reg></choice> ?</l>
+               <l>Vous n’en approchez point. La <choice><orig>chetive</orig><reg>chétive</reg></choice> <choice><orig>pecore</orig><reg>pécore</reg></choice></l>
+               <l rend="indent">S’enfla si bien qu’elle creva.</l>
+            </lg>
+         <pb n="8"/>
+            <lg rhyme="abba">
+               <l>Le monde est plein de gens qui ne sont pas plus sa<lb/>ges :</l>
+               <l>Tout Bourgeois veut <choice><orig>bastir</orig><reg>bâtir</reg></choice> comme les grands <lb/>Seigneurs ;</l>
+               <l>Tout petit Prince a des Ambassadeurs ;</l>
+               <l rend="indent">Tout Marquis veut avoir des Pages.</l>
+            </lg>
+         </div>
+         
+         <div type="fable">
+            <head rend="alignCenter">FABLE <choice><orig>QUATRIESME</orig><reg>QUATRIÈME</reg></choice>.<lb/>
+               <emph>Les deux Mulets.</emph>
+            </head>
+            <lg rhyme="abbaa">
+               <l>Deux Mulets <choice><orig>cheminoient</orig><reg>cheminaient</reg></choice> ; l’un d’avoine char<lb/>gé ;</l>
+               <l>L’autre portant l’argent de la Gabelle.</l>
+               <l><choice><orig>Celuy-cy</orig><reg>Celui-ci</reg></choice> glorieux d’une charge si belle,</l>
+               <l>N’<choice><orig>eust</orig><reg>eût</reg></choice> voulu pour beaucoup en <choice><orig>estre</orig><reg>être</reg></choice> soulagé.</l>
+         <pb n="9"/>
+               <l rend="indent">Il <choice><orig>marchoit</orig><reg>marchait</reg></choice> d’un pas relevé,</l>
+            </lg>
+            <lg rhyme="abbaab">
+               <l rend="indent">Et <choice><orig>faisoit</orig><reg>faisait</reg></choice> sonner la sonnette;</l>
+               <l rend="indent">Quand l’<choice><orig>ennemy</orig><reg>ennemi</reg></choice> se <choice><orig>presentant</orig><reg>présentant</reg></choice>,</l>
+               <l rend="indent">Comme il en <choice><orig>vouloit</orig><reg>voulait</reg></choice> à l’argent.</l>
+               <l>Sur le Mulet du fisc une troupe se jette;</l>
+               <l rend="indent">Le saisit au frein, <choice><orig>&amp;</orig><reg>et</reg></choice> l’<choice><orig>arreste</orig><reg>arrête</reg></choice>.</l>
+               <l rend="indent">Le Mulet se défendant</l>
+            </lg>
+            <lg rhyme="abab">
+               <l>Se sent percer de coups, il <choice><orig>gemit</orig><reg>gémit</reg></choice>, il <choice><orig>soûpire</orig><reg>soupire</reg></choice> :</l>
+               <l>Est-ce donc là, dit-il, ce qu’on m’<choice><orig>avoit</orig><reg>avait</reg></choice> promis ?</l>
+               <l>Ce Mulet qui me suit du danger se retire ;</l>
+               <l rend="indent">Et <choice><orig>moy</orig><reg>moi</reg></choice> j’y tombe <choice><orig>&amp;</orig><reg>et</reg></choice> je <choice><orig>peris</orig><reg>péris</reg></choice>.</l>
+            </lg>
+            <lg rhyme="abba">
+               <l rend="indent"><choice><orig>Amy</orig><reg>Ami</reg></choice>, <choice><orig>luy</orig><reg>lui</reg></choice> dit son camarade,</l>
+               <l>Il n’est pas <choice><orig>toûjours</orig><reg>toujours</reg></choice> bon d’avoir un haut <choice><orig>employ</orig><reg>emploi</reg></choice> :</l>
+               <l>Si tu n’<choice><orig>avois</orig><reg>avais</reg></choice> <choice><orig>servy</orig><reg>servi</reg></choice> qu’un <choice><orig>Meusnier</orig><reg>Meunier</reg></choice>, comme <choice><orig>moy</orig><reg>moi</reg></choice>,</l>
+               <l rend="indent">Tu ne serois<choice><orig></orig><reg></reg></choice> pas si malade.</l>
+            </lg>
+         </div>   
+         <pb n="10"/>
+         
+         <div type="fable">
+            <head rend="alignCenter">FABLE <choice><orig>CINQUIESME</orig><reg>CINQUIÈME</reg></choice>.<lb/>
+               <emph>Le Loup <choice><orig>&amp;</orig><reg>et</reg></choice> le Chien.</emph>
+            </head>
+            <lg rhyme="abab">
+               <l rend="indent">Un Loup n’<choice><orig>avoit</orig><reg>avait</reg></choice> que les os <choice><orig>&amp;</orig><reg>et</reg></choice> la peau ;</l>
+               <l rend="indent">Tant que les Chiens <choice><orig>faisoient</orig><reg>faisaient</reg></choice> bonne garde.</l>
+               <l>Ce Loup rencontre un Dogue aussi puissant que<lb/> beau,</l>
+               <l>Gras, <choice><orig>poly</orig><reg>poli</reg></choice>, qui s’<choice><orig>estoit</orig><reg>était</reg></choice> fourvoyé par mégarde.</l>
+            </lg>
+            <lg rhyme="aabb">
+               <l rend="indent">L’attaquer, le mettre en quartiers,</l>
+               <l rend="indent">Sire Loup l’<choice><orig>eust</orig><reg>eût</reg></choice> fait volontiers :</l>
+               <l rend="indent">Mais il <choice><orig>faloit</orig><reg>fallait</reg></choice> livrer bataille ;</l>
+               <l rend="indent">Et le Mâtin <choice><orig>estoit</orig><reg>était</reg></choice> de taille</l>   
+            </lg>
+            <lg rhyme="aaa">
+               <l rend="indent">A se défendre hardiment.</l>
+               <l rend="indent">Le Loup donc l’aborde humblement,</l>
+         <pb n="11"/>
+               <l>Entre en propos, <choice><orig>&amp;</orig><reg>et</reg></choice> <choice><orig>luy</orig><reg>lui</reg></choice> fait compliment</l>
+            </lg>
+            <lg rhyme="aa">
+               <l rend="indent">Sur son embonpoint qu’il admire.</l>
+               <l rend="indent">Il ne tiendra qu’à vous, beau Sire,</l>
+            </lg>
+            <lg rhyme="aabb">
+               <l>D’<choice><orig>estre</orig><reg>être</reg></choice> aussi gras que <choice><orig>moy</orig><reg>moi</reg></choice>, <choice><orig>luy</orig><reg>lui</reg></choice> repartit le Chien :</l>
+               <l rend="indent">Quittez les bois, vous ferez bien :</l>
+               <l rend="indent">Vos pareils y sont miserables,</l>
+               <l rend="indent">Cancres, haires, <choice><orig>&amp;</orig><reg>et</reg></choice> pauvres diables ;</l>
+            </lg>
+            <lg rhyme="abba">
+               <l>Dont la condition est de mourir de faim.</l>
+               <l>Car <choice><orig>quoy</orig><reg>quoi</reg></choice> ? Rien d’assuré, point de franche lipée ;</l>
+               <l rend="indent">Tout à la pointe de l’épée:</l>
+               <l>Suivez-<choice><orig>moy</orig><reg>moi</reg></choice> ; vous aurez un bien meilleur destin.</l>
+            </lg>
+            <lg rhyme="abbaa">
+               <l rend="indent">Le Loup reprit : Que me faudra-t-il faire ?</l>
+               <l>Presque rien, dit le Chien ; donner la chasse aux <lb/>gens</l>
+               <l rend="indent"><choice><orig>Portans</orig><reg>Portant</reg></choice> <choice><orig>bastons</orig><reg>bâtons</reg></choice>, <choice><orig>&amp;</orig><reg>et</reg></choice> <choice><orig>mendians</orig><reg>mendiants</reg></choice> ;</l>
+               <l><choice><orig>Flater</orig><reg>Flatter</reg></choice> ceux du logis ; à son <choice><orig>Maistre</orig><reg>Maître</reg></choice> complaire ;</l>
+               <l rend="indent">Moyennant <choice><orig>quoy</orig><reg>quoi</reg></choice> <choice><orig>vostre</orig><reg>votre</reg></choice> salaire</l>
+            </lg>
+            <lg rhyme="aa">
+               <l>Sera force reliefs de toutes les façons ;</l>
+               <l rend="indent">Os de poulets, Os de pigeons,</l>
+            </lg>
+            <lg rhyme="abab">
+               <l rend="indent">Sans parler de mainte caresse.</l>
+               <l>Le Loup déjà se forge une félicité</l>
+               <l rend="indent">Qui le fait pleurer de tendresse.</l>
+               <l>Chemin faisant il <choice><orig>vid</orig><reg>vit</reg></choice> le col du Chien, pelé :</l>
+            </lg>
+         <pb n="12"/>  
+            <lg rhyme="abab">
+               <l>Qu’est-ce là ? <choice><orig>Luy</orig><reg>Lui</reg></choice> dit-il. Rien. <choice><orig>Quoy</orig><reg>Quoi</reg></choice> rien ?</l>
+               <l rend="indent">Peu de chose.</l>
+               <l>Mais <choice><orig>encor</orig><reg>encore</reg></choice> ? Le collier dont je suis attaché,</l>
+               <l>De ce que vous voyez est peut-<choice><orig>estre</orig><reg>être</reg></choice> la cause.</l>
+            </lg>
+            <lg rhyme="abab">
+               <l>Attaché ? dit le Loup : Vous ne courez donc pas</l>
+               <l rend="indent">Où vous voulez ? Pas <choice><orig>toûjours</orig><reg>toujours</reg></choice>, mais qu’importe ?</l>
+               <l>Il importe si bien, que de tous vos repas</l>
+               <l rend="indent">Je ne veux en aucune sorte ;</l>
+            </lg>
+            <lg rhyme="aa">
+               <l>Et ne <choice><orig>voudrois</orig><reg>voudrais</reg></choice> pas <choice><orig>mesme</orig><reg>même</reg></choice> à ce prix un <choice><orig>tresor</orig><reg>trésor</reg></choice>.</l>
+               <l>Cela dit, <choice><orig>Maistre</orig><reg>Maître</reg></choice> Loup s’<choice><orig>enfuït</orig><reg>enfuit</reg></choice>, <choice><orig>&amp;</orig><reg>et</reg></choice> court <choice><orig>encor</orig><reg>encore</reg></choice>.</l>
+            </lg>
+         </div>
+      </body>
+  </text>
+</TEI>
