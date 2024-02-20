@@ -7,29 +7,23 @@
       <fileDesc>
          <titleStmt>
             <title>Édition numérique de trois fables choisies de Jean de La Fontaine</title>
+            <author>La Fontaine, Jean de</author>
+            <editor>Barbin, Claude</editor>
             <respStmt>
                <resp>Encodé en XML-TEI par</resp>
-               <persName>Natacha Grim</persName>
+               <persName>Grim, Natacha</persName>
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <publisher>Claude Barbin</publisher>
-            <pubPlace>
-               <address>
-                  <country>France</country>
-                  <settlement type="ville">Paris</settlement>
-               </address>
-            </pubPlace>
-            <date when-iso="1668">1668</date>
-            <distributor facs="https://gallica.bnf.fr/ark:/12148/btv1b8610825d/f1">Bibliothèque nationale de France</distributor>
-            <availability>
-               <licence target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica">Domaine public</licence>
-            </availability>
+            <p>Encodage sur la modernisation de l'orthographe réalisée dans le cadre du Master 2 Technologies Numériques Appliquées à l'Histoire
+            de l'École nationale des Chartes</p>
          </publicationStmt>
          <sourceDesc>
             <bibl>
                <title>Fables choisies , mises en vers par M. de La Fontaine</title>
-               <author>La Fontaine, Jean de (1621-1695)</author>
+               <author>La Fontaine, Jean de</author>
+               <editor role="éditeur">Barbin, Claude</editor>
+               <editor role="graveur">Chauveau, François</editor>
                <date when="1668">1668</date>
                <biblScope unit="page" from="7" to="12">7-12</biblScope>
             </bibl>
@@ -41,9 +35,17 @@
                   <idno>ark:/12148/btv1b8610825d</idno>
                </msIdentifier>
             </msDesc>
-            
          </sourceDesc>
       </fileDesc>
+     <encodingDesc>
+        <projectDesc>
+           <p>L'encodage a été réalisé sur la base de la version numérisée de l'ouvrage publié sur Galllica 
+              en 2010. L'édition date de 1668 et a été produite par Claude Barbin, à Paris.</p> 
+           <p>L'ensemble du texte a été retranscrit, exception faite des mots soumis à une césure de fin de ligne. 
+              Les illustrations n'ont pas été prises en compte. Les unités logiques des vers ont été établies selon 
+              leur schéma de rimes.</p>
+        </projectDesc>
+     </encodingDesc>
   </teiHeader>
 
   <text>
@@ -71,8 +73,8 @@
             </lg>
          <pb n="8"/>
             <lg rhyme="abba">
-               <l>Le monde est plein de gens qui ne sont pas plus sa<lb/>ges :</l>
-               <l>Tout Bourgeois veut <choice><orig>bastir</orig><reg>bâtir</reg></choice> comme les grands <lb/>Seigneurs ;</l>
+               <l>Le monde est plein de gens qui ne sont pas plus sages :</l>
+               <l>Tout Bourgeois veut <choice><orig>bastir</orig><reg>bâtir</reg></choice> comme les grands Seigneurs ;</l>
                <l>Tout petit Prince a des Ambassadeurs ;</l>
                <l rend="indent">Tout Marquis veut avoir des Pages.</l>
             </lg>
@@ -83,7 +85,7 @@
                <emph>Les deux Mulets.</emph>
             </head>
             <lg rhyme="abbaa">
-               <l>Deux Mulets <choice><orig>cheminoient</orig><reg>cheminaient</reg></choice> ; l’un d’avoine char<lb/>gé ;</l>
+               <l>Deux Mulets <choice><orig>cheminoient</orig><reg>cheminaient</reg></choice> ; l’un d’avoine chargé ;</l>
                <l>L’autre portant l’argent de la Gabelle.</l>
                <l><choice><orig>Celuy-cy</orig><reg>Celui-ci</reg></choice> glorieux d’une charge si belle,</l>
                <l>N’<choice><orig>eust</orig><reg>eût</reg></choice> voulu pour beaucoup en <choice><orig>estre</orig><reg>être</reg></choice> soulagé.</l>
@@ -120,7 +122,7 @@
             <lg rhyme="abab">
                <l rend="indent">Un Loup n’<choice><orig>avoit</orig><reg>avait</reg></choice> que les os <choice><orig>&amp;</orig><reg>et</reg></choice> la peau ;</l>
                <l rend="indent">Tant que les Chiens <choice><orig>faisoient</orig><reg>faisaient</reg></choice> bonne garde.</l>
-               <l>Ce Loup rencontre un Dogue aussi puissant que<lb/> beau,</l>
+               <l>Ce Loup rencontre un Dogue aussi puissant que beau,</l>
                <l>Gras, <choice><orig>poly</orig><reg>poli</reg></choice>, qui s’<choice><orig>estoit</orig><reg>était</reg></choice> fourvoyé par mégarde.</l>
             </lg>
             <lg rhyme="aabb">
@@ -153,7 +155,7 @@
             </lg>
             <lg rhyme="abbaa">
                <l rend="indent">Le Loup reprit : Que me faudra-t-il faire ?</l>
-               <l>Presque rien, dit le Chien ; donner la chasse aux <lb/>gens</l>
+               <l>Presque rien, dit le Chien ; donner la chasse aux gens</l>
                <l rend="indent"><choice><orig>Portans</orig><reg>Portant</reg></choice> <choice><orig>bastons</orig><reg>bâtons</reg></choice>, <choice><orig>&amp;</orig><reg>et</reg></choice> <choice><orig>mendians</orig><reg>mendiants</reg></choice> ;</l>
                <l><choice><orig>Flater</orig><reg>Flatter</reg></choice> ceux du logis ; à son <choice><orig>Maistre</orig><reg>Maître</reg></choice> complaire ;</l>
                <l rend="indent">Moyennant <choice><orig>quoy</orig><reg>quoi</reg></choice> <choice><orig>vostre</orig><reg>votre</reg></choice> salaire</l>
@@ -168,7 +170,7 @@
                <l rend="indent">Qui le fait pleurer de tendresse.</l>
                <l>Chemin faisant il <choice><orig>vid</orig><reg>vit</reg></choice> le col du Chien, pelé :</l>
             </lg>
-         <pb n="12"/>  
+         <pb n="12"/>
             <lg rhyme="abab">
                <l>Qu’est-ce là ? <choice><orig>Luy</orig><reg>Lui</reg></choice> dit-il. Rien. <choice><orig>Quoy</orig><reg>Quoi</reg></choice> rien ?</l>
                <l rend="indent">Peu de chose.</l>
