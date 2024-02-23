@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:s="http://purl.oclc.org/dsdl/schematron">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -135,12 +135,11 @@
                   <p>Le contenu des fables est encodé dans l'élément <gi>body</gi>, lui-même élément
                      enfant de <gi>text</gi>. Notre travail d'encodage concerne présentement trois
                      fables et l'utilisation des éléments suit la même logique.</p>
-                  <p>Chaque changement de page est signalé par l'intermédiaire d'un élément
-                     auto-fermant <gi>pb</gi>, lequel prend l'attribut obligatoire <att>n</att> dont
-                     la valeur correspond au numéro de la présente page : <egXML
-                        xmlns="http://www.tei-c.org/ns/Examples">
-                        <pb n="7"/>
-                     </egXML></p>
+                  <p>Précisons que nous n'avons pas indiqué les changements de page avec l'élément
+                     auto-fermant <gi>pb</gi>. De la même manière que nous n'avons pas encodé les 
+                     césures de mots, nous faisons le choix de ne pas rendre compte de ces éléments 
+                     de mise en page, dans la mesure où le texte des fables nous importe plus que 
+                     la transcription davantage matérielle et codicologique de cette édition.</p>
                   <p>Également, nous avons conservé l'effet d'indentation appliqué à certains vers.
                      Pour le signaler, nous ajoutons l'attribut <att>rend</att> dont la valeur est
                         "<val>indent</val>". Si un vers, noté <gi>l</gi> ne possède pas l'attribut,
@@ -211,7 +210,48 @@
             <head>Éléments utilisés</head>
             <schemaSpec ident="oddbyexample" start="TEI ">
                <moduleRef key="tei"/>
-               <!--Checking module textcrit-->
+               
+               <!-- Règle sur le contenu de l'élément div -->
+               <elementSpec ident="div" mode="change">
+                  <desc xml:lang="fr">L'élément div contient dans cet ordre : maximum un élément head et au moins un élément lg.</desc>
+                  <content>
+                     <sequence>
+                        <elementRef key="head" maxOccurs="1"/>
+                        <elementRef key="lg" minOccurs="1" maxOccurs="unbounded"/>
+                     </sequence>
+                  </content>
+                  <attList>
+                     <attDef ident="type" mode="change"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règle sur le contenu de l'élément lb -->
+               <elementSpec ident="lb" mode="change">
+                  <desc xml:lang="fr">L'élément lb doit être obligatoirement vide</desc>
+                  <content>
+                     <empty/>
+                  </content>
+               </elementSpec>
+               
+               <!-- Règle sur le contenu et les attributs de l'élément lg -->
+               <elementSpec ident="lg" mode="change">
+                  <desc xml:lang="fr">L'élément lg contient au moins un élément l et possède obligatoirement un attribut rhyme</desc>
+                  <content>
+                     <elementRef key="l" minOccurs="1" maxOccurs="unbounded"/>
+                  </content>
+                  <attList>
+                     <attDef ident="rhyme" mode="change" usage="req"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règle sur le contenu de l'attribut rhyme -->
+               <constraintSpec ident="attReq" scheme="schematron">
+                  <constraint>
+                     <s:report test="matches(@rhyme, '^[0-9A-Z]+$')">L'attribut rhyme ne doit avoir pour valeur ni un chiffre ni une lettre en majuscule.</s:report>
+                  </constraint>
+               </constraintSpec>
+               
                <classRef key="att.textCritical"/>
                <classRef key="model.rdgLike"/>
                <classRef key="model.rdgPart"/>
@@ -491,7 +531,7 @@
                </classSpec>
                <!--Checking module core-->
                <moduleRef key="core"
-                  include="p emph choice reg orig date ref list item head pb lb author editor respStmt resp title biblScope bibl l lg"/>
+                  include="p emph choice reg orig date ref list item head lb author editor respStmt resp title biblScope bibl l lg"/>
                <elementSpec ident="reg" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>
@@ -514,16 +554,6 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="head" mode="change">
-                  <attList>
-                     <attDef ident="type" mode="delete"/>
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="pb" mode="change">
-                  <attList>
-                     <attDef ident="type" mode="delete"/>
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="lb" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>
                   </attList>
@@ -581,11 +611,6 @@
                      <attDef ident="rhyme" mode="delete"/>
                   </attList>
                </elementSpec>
-               <elementSpec ident="lg" mode="change">
-                  <attList>
-                     <attDef ident="type" mode="delete"/>
-                  </attList>
-               </elementSpec>
                <!--Checking module figures-->
                <!--Checking module header-->
                <moduleRef key="header"
@@ -631,16 +656,6 @@
                <elementSpec ident="text" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="div" mode="change">
-                  <attList>
-                     <attDef ident="rhyme" mode="delete"/>
-                     <attDef ident="type" mode="change">
-                        <valList mode="add" type="closed">
-                           <valItem ident="fable"/>
-                        </valList>
-                     </attDef>
                   </attList>
                </elementSpec>
                <elementSpec ident="div1" mode="change">

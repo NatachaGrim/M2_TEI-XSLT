@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="out/ODD_TEI-Fables.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
@@ -50,7 +48,6 @@
 
   <text>
       <body>
-         <pb n="7"/>
          <div type="fable">
             <head rend="alignCenter">FABLE <choice><orig>TROISIESME</orig><reg>TROISIÈME</reg></choice>.<lb/>
                <emph>La <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> qui se veut faire aussi<lb/>grosse que le Bœuf.</emph>
@@ -64,14 +61,13 @@
             <lg rhyme="aa">
                <l rend="indent">Pour égaler l’animal en grosseur ;</l>
                <l rend="indent">Disant, Regardez bien ma sœur,</l>
-            </lg>   
+            </lg>
             <lg rhyme="abab">
                <l>Est-ce assez ? Dites-<choice><orig>moy</orig><reg>moi</reg></choice> : N’y suis-je point encore ?</l>
                <l><choice><orig>Nenny</orig><reg>Nenni</reg></choice>. M’y <choice><orig>voicy</orig><reg>voici</reg></choice> donc ? Point du tout. M’y <choice><orig>voila</orig><reg>voilà</reg></choice> ?</l>
                <l>Vous n’en approchez point. La <choice><orig>chetive</orig><reg>chétive</reg></choice> <choice><orig>pecore</orig><reg>pécore</reg></choice></l>
                <l rend="indent">S’enfla si bien qu’elle creva.</l>
             </lg>
-         <pb n="8"/>
             <lg rhyme="abba">
                <l>Le monde est plein de gens qui ne sont pas plus sages :</l>
                <l>Tout Bourgeois veut <choice><orig>bastir</orig><reg>bâtir</reg></choice> comme les grands Seigneurs ;</l>
@@ -89,7 +85,6 @@
                <l>L’autre portant l’argent de la Gabelle.</l>
                <l><choice><orig>Celuy-cy</orig><reg>Celui-ci</reg></choice> glorieux d’une charge si belle,</l>
                <l>N’<choice><orig>eust</orig><reg>eût</reg></choice> voulu pour beaucoup en <choice><orig>estre</orig><reg>être</reg></choice> soulagé.</l>
-         <pb n="9"/>
                <l rend="indent">Il <choice><orig>marchoit</orig><reg>marchait</reg></choice> d’un pas relevé,</l>
             </lg>
             <lg rhyme="abbaab">
@@ -112,8 +107,7 @@
                <l>Si tu n’<choice><orig>avois</orig><reg>avais</reg></choice> <choice><orig>servy</orig><reg>servi</reg></choice> qu’un <choice><orig>Meusnier</orig><reg>Meunier</reg></choice>, comme <choice><orig>moy</orig><reg>moi</reg></choice>,</l>
                <l rend="indent">Tu ne serois<choice><orig></orig><reg></reg></choice> pas si malade.</l>
             </lg>
-         </div>   
-         <pb n="10"/>
+         </div>
          
          <div type="fable">
             <head rend="alignCenter">FABLE <choice><orig>CINQUIESME</orig><reg>CINQUIÈME</reg></choice>.<lb/>
@@ -134,7 +128,6 @@
             <lg rhyme="aaa">
                <l rend="indent">A se défendre hardiment.</l>
                <l rend="indent">Le Loup donc l’aborde humblement,</l>
-         <pb n="11"/>
                <l>Entre en propos, <choice><orig>&amp;</orig><reg>et</reg></choice> <choice><orig>luy</orig><reg>lui</reg></choice> fait compliment</l>
             </lg>
             <lg rhyme="aa">
@@ -170,7 +163,6 @@
                <l rend="indent">Qui le fait pleurer de tendresse.</l>
                <l>Chemin faisant il <choice><orig>vid</orig><reg>vit</reg></choice> le col du Chien, pelé :</l>
             </lg>
-         <pb n="12"/>
             <lg rhyme="abab">
                <l>Qu’est-ce là ? <choice><orig>Luy</orig><reg>Lui</reg></choice> dit-il. Rien. <choice><orig>Quoy</orig><reg>Quoi</reg></choice> rien ?</l>
                <l rend="indent">Peu de chose.</l>
