@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
+    
+    <!-- VARIABLES -->
+    
+    <!-- Mode de sortie : en HTML, conservation de l'indentation, encodage en UTF-8, déclaration du DOCTYPE -->
+    <xsl:output method="html" omit-xml-declaration="yes" indent="yes" encoding="UTF-8" doctype-system="about:legacy-compat"/>
 
-    <xsl:output method="html" omit-xml-declaration="yes" indent="yes" encoding="UTF-8"/>
-
+    <!-- Nom du fichier de sortie pour la page d'accueil -->
     <xsl:variable name="index">
-        <xsl:value-of select="concat('Fables-index', '.html')"/>
+        <xsl:value-of select="concat('fablesIndex', '.html')"/>
     </xsl:variable>
-
-    <xsl:variable name="fable3">
-        <xsl:value-of select="concat('Fables-3', '.html')"/>
-    </xsl:variable>
-
-    <xsl:variable name="fable4">
-        <xsl:value-of select="concat('Fables-4', '.html')"/>
-    </xsl:variable>
-
-    <xsl:variable name="fable5">
-        <xsl:value-of select="concat('Fables-5', '.html')"/>
-    </xsl:variable>
-
+    
+    <!-- Texte renvoyant vers la page d'accueil dans la barre de navigation -->
+    <xsl:variable name="return_index">Accueil</xsl:variable>
+        
+    <!-- Métadonnées et style des fichiers HTML -->
     <xsl:variable name="header">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -34,8 +30,11 @@
                 </xsl:attribute>
             </xsl:element>
             <meta name="author" content="Natacha Grim"/>
-
             <style>
+                html {
+                scroll-behavior: smooth;
+                }
+                
                 body {
                 background-image: url('images/Illu-fond.png');
                 background-repeat: no-repeat;
@@ -45,14 +44,17 @@
                 font-family: Arial, Helvetica, sans-serif;
                 }
                 
+                @font-face {
+                font-family: heavyrain;
+                src: url(HeavyRain/HeavyRain_PERSONAL_USE_ONLY.ttf);
+                }
                 
                 h1 {
-                color: white;
-                border: white groove 5px;
-                font-weight: lighter;
+                color: black;
+                font-family: heavyrain;
+                font-size: 40px;
                 letter-spacing: 2px;
-                text-shadow: 1px 1px 10px black;
-                background-color: rgba(0, 0, 0, 0.3);
+                text-shadow: 0 0 2px white;
                 
                 padding-top: 10px;
                 padding-bottom: 10px;
@@ -61,6 +63,11 @@
                 
                 margin-left: 60px;
                 margin-right: 60px;
+                }
+                
+                .title-fable {
+                margin-left: 35px;
+                margin-right: 35px;
                 }
                 
                 .box {
@@ -120,11 +127,17 @@
                 }
                 
                 ol > li > a {
-                color:black;
+                color:blue;
+                transition: 0.3s
                 }
                 
-                a:hover {
-                text-shadow: 2px 2px 30px black;
+                ul > li > a:hover {
+                text-shadow: 0 0 10px white;
+                color: black;
+                }
+                
+                ol > li > a:hover {
+                color: black;
                 }
                 
                 p {
@@ -149,99 +162,224 @@
                 margin-left:-30px;
                 padding-right:10px;
                 }
-
+                
+                img {
+                filter: drop-shadow(0 0 0.75rem black);
+                }
+                
+                table {
+                border-collapse: collapse;
+                border: outset 5px;
+                margin: auto;
+                }
+                
+                th, td {
+                padding: 15px;
+                border: outset 5px;
+                background-color: rgba(255, 215, 0, 0.1);
+                }
+                
+                .boxEnd {
+                background-color: rgba(153, 101, 21, 0.7);
+                border: ridge white 2px;
+                box-shadow: 1px -1px 10px black;
+                text-align: center;
+                position: relative;
+                text-shadow: 2px 2px 30px black;
+                z-index: 1;
+                padding: 10px 0;
+                margin: 10px auto;
+                display: table;
+                width: auto;
+                color: white;
+                letter-spacing: 1px;
+                }
+                
+                .boxEnd > p {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                text-shadow: 2px 2px 5px black;
+                margin: 0;
+                padding: 0 10px;
+                font-size: small;
+                }
+                
+                .boxEnd > p > a {
+                text-decoration: none;
+                color: white;
+                transition: 0.3s;
+                }
+                
+                .boxEnd > p > a:hover {
+                text-shadow: 0 0 10px white;
+                color: black;
+                }
             </style>
-
         </head>
     </xsl:variable>
 
-    <xsl:variable name="return_index">
-        <a href="Fables-index.html">
-            <i>Accueil</i>
-        </a>
-    </xsl:variable>
+    <!-- FICHIERS DE SORTIE -->
 
-    <xsl:variable name="return_fable3">
-        <a href="Fables-3.html">
-            <i>La Grenouille qui se veut faire aussi grosse que le Bœuf</i>
-        </a>
-    </xsl:variable>
-
-    <xsl:variable name="return_fable4">
-        <a href="Fables-4.html">
-            <i>Les deux Mulets</i>
-        </a>
-    </xsl:variable>
-
-    <xsl:variable name="return_fable5">
-        <a href="Fables-5.html">
-            <i>Le Loup et le Chien</i>
-        </a>
-    </xsl:variable>
-
+    <!-- Appel de tous les fichiers de sortie -->
     <xsl:template match="/">
         <xsl:call-template name="index"/>
+        <xsl:call-template name="fables"/>
     </xsl:template>
-
+    
+    <!-- PAGE D'ACCUEIL -->
     <xsl:template name="index">
         <xsl:result-document href="html/{$index}">
             <html lang="fr">
                 <xsl:copy-of select="$header"/>
                 <body>
+                    <!-- Titre majeur de la page -->
                     <header>
-                        <h1><i><xsl:value-of select="//sourceDesc//title"/></i></h1>
+                        <h1><xsl:value-of select="//sourceDesc//title"/></h1>
                     </header>
-
+                    <!-- Barre de navigation -->
                     <div class="barre">
                         <nav>
                             <ul>
-                                <li><a href="#{$index}"><xsl:value-of select="$return_index"/></a></li>
                                 <li><a href="#fables-encodees">Fables encodées</a></li>
-                                <li><a href="{$fable4}" target="_blank"><xsl:value-of select="$return_fable4"/></a></li>
-                                <li><a href="{$fable5}" target="_blank"><xsl:value-of select="$return_fable5"/></a></li>
+                                <li><a href="https://gallica.bnf.fr/ark:/12148/btv1b8610825d/f1" target="_blank">Consulter l'édition encodée</a></li>
+                                <li><a href="https://fr.wikipedia.org/wiki/Jean_de_La_Fontaine" target="_blank">Sur Jean de La Fontaine</a></li>
                             </ul>
                         </nav>
                     </div>
+                    <!-- Corps du contenu de la page -->
                     <div class="box">
                         <h2><xsl:value-of select="//publicationStmt/p"/></h2>
                         <div class="container">
                             
                             <div class="image">
                                 <img src="images/La-Fontaine.png"
-                                    alt="Portrait de Jean de La Fontaine" width="210px" id="trans7"/>
+                                    alt="Portrait de Jean de La Fontaine" width="210" id="trans7"/>
                                 <figcaption>
                                     <em>Jean de La Fontaine par Hyacinthe Rigaud, en 1690.</em>
                                 </figcaption>
                             </div>
                             <div class="text">
                                 <p>L'œuvre de <b>Jean de La Fontaine</b> demeure un fleuron de la
-                                    littérature classique française et continue, à ce titre,d'être
+                                    littérature classique française et continue, à ce titre, d'être
                                     enseignée aux plus jeunes comme aux étudiants dans le cadre
                                     d'études supérieures. Les fables ont <i>ipso facto</i>
                                     fait l'objet de quantité d'éditions. Aussi, nous avons choisi de
                                     prendre pour base une édition de 1668 et d'en moderniser
                                     l'orthographe afin d'en rendre la lecture accessible dès le plus
                                     jeune âge en conservant la syntaxe d'époque.</p>
-                                <p><xsl:value-of select="//encodingDesc//p[1]"/></p>
-                                <p><xsl:value-of select="//encodingDesc//p[2]"/></p>
+                                <xsl:apply-templates select="//encodingDesc"/>
                             </div>
                         </div>
+                        <!-- Liste cliquable de l'ensemble des fables encodées -->
                         <h2 id="fables-encodees">Fables encodées</h2>
                         <ol>
-                            <li><a href="{$fable3}" target="_blank"><xsl:value-of select="$return_fable3"/></a></li>
-                            <li><a href="{$fable4}" target="_blank"><xsl:value-of select="$return_fable4"/></a></li>
-                            <li><a href="{$fable5}" target="_blank"><xsl:value-of select="$return_fable5"/></a></li>
+                            <xsl:for-each select="//body/div">
+                                <xsl:variable name="n">
+                                    <xsl:number count="div" from="body"/>
+                                </xsl:variable>
+                                <li><a href="{concat('fable', $n+2, '.html')}" target="_blank"><xsl:apply-templates select="head"/></a></li>
+                            </xsl:for-each>
                         </ol>
                     </div>
-
                 </body>
             </html>
         </xsl:result-document>
     </xsl:template>
+    
+    
+    <!-- PAGE DES FABLES -->
+    
+    <xsl:template name="fables">
+        <!-- Boucle générant un fichier HTML par fable -->
+        <xsl:for-each select="//body/div">
+            <!-- Compteur permettant de générer le nom des fichiers de sortie et les liens de navigation interne -->
+            <xsl:variable name="n">
+                <xsl:number count="div" from="body"/>
+            </xsl:variable>
+            <xsl:result-document href="{concat('html/fable', $n+2, '.html')}">
+                <xsl:copy-of select="$header"/>
+                <html lang="fr">
+                    <body>
+                        <!-- Titre modernisé de la fable -->
+                        <header>
+                            <h1 class="title-fable"><xsl:apply-templates select="head"/></h1>
+                        </header>
+                        <!-- Barre de navigation -->
+                        <div class="barre">
+                            <nav>
+                                <ul>
+                                    <li><a href="{$index}" target="_blank"><xsl:value-of select="$return_index"/></a></li>
+                                    <li><a href="https://gallica.bnf.fr/ark:/12148/btv1b8610825d/f1" target="_blank">Consulter l'édition encodée</a></li>
+                                    <li><a href="https://fr.wikipedia.org/wiki/Jean_de_La_Fontaine" target="_blank">Sur Jean de La Fontaine</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Corps du contenu de la page -->
+                        <div class="box">
+                            <h2>Lecture comparée</h2>
+                            <table border="1">
+                                <tr>
+                                    <th>Version modernisée</th>
+                                    <th>Version originale</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <xsl:apply-templates select="lg"/>
+                                    </td>
+                                    <td>
+                                        <xsl:apply-templates select="lg" mode="orig"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- Pied de page permettant de naviguer entre les fables -->
+                        <footer>
+                            <!-- Si une fable précède celle de la page courante, création d'un lien de renvoi -->
+                            <xsl:if test="preceding-sibling::div">
+                                <div class="boxEnd">
+                                    <p><a href="{concat('fable', count(preceding-sibling::div) + 2, '.html')}" target="_blank">◄ Page précédente : <i><xsl:apply-templates select="preceding-sibling::div[1]/head"/></i></a></p>
+                                </div>
+                            <!-- Si une fable succède celle de la page courante, création d'un lien de renvoi -->
+                            </xsl:if>
+                            <xsl:if test="following-sibling::div">
+                                <div class="boxEnd">
+                                    <p><a href="{concat('fable', count(preceding-sibling::div) + 4, '.html')}" target="_blank">► Page suivante : <i><xsl:apply-templates select="following-sibling::div[1]/head"/></i></a></p>
+                                </div>
+                            </xsl:if>      
+                        </footer>
+                    </body>
+                </html>
+            </xsl:result-document>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="p">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="lg">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="l">
+        <xsl:apply-templates/><br/>
+    </xsl:template>
+    
+    <xsl:template match="choice">
+        <xsl:apply-templates select="reg"/>
+    </xsl:template>
 
-
-
-
-
+    <xsl:template match="lg" mode="orig">
+        <p><xsl:apply-templates mode="orig"/></p>
+    </xsl:template>
+    
+    <xsl:template match="l" mode="orig">
+        <xsl:apply-templates mode="orig"/><br/>
+    </xsl:template>
+    
+    <xsl:template match="choice" mode="orig">
+        <xsl:apply-templates select="orig"/>
+    </xsl:template>
 
 </xsl:stylesheet>

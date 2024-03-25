@@ -13,7 +13,7 @@
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <p>Encodage sur la modernisation de l'orthographe réalisée dans le cadre du Master 2 Technologies Numériques Appliquées à l'Histoire
+            <p>Encodage sur la modernisation de l'orthographe réalisé dans le cadre du Master 2 Technologies Numériques Appliquées à l'Histoire
             de l'École nationale des Chartes</p>
          </publicationStmt>
          <sourceDesc>
@@ -50,7 +50,7 @@
       <body>
          <div type="fable">
             <head rend="alignCenter">FABLE <choice><orig>TROISIESME</orig><reg>TROISIÈME</reg></choice>.<lb/>
-               <emph>La <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> qui se veut faire aussi<lb/>grosse que le Bœuf.</emph>
+               <emph>La <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> qui se veut faire aussi<lb/> grosse que le Bœuf.</emph>
             </head>
             <lg rhyme="abab">
                <l rend="indent">Une <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> <choice><orig>vid</orig><reg>vit</reg></choice> un Bœuf,</l>
@@ -105,7 +105,7 @@
                <l rend="indent"><choice><orig>Amy</orig><reg>Ami</reg></choice>, <choice><orig>luy</orig><reg>lui</reg></choice> dit son camarade,</l>
                <l>Il n’est pas <choice><orig>toûjours</orig><reg>toujours</reg></choice> bon d’avoir un haut <choice><orig>employ</orig><reg>emploi</reg></choice> :</l>
                <l>Si tu n’<choice><orig>avois</orig><reg>avais</reg></choice> <choice><orig>servy</orig><reg>servi</reg></choice> qu’un <choice><orig>Meusnier</orig><reg>Meunier</reg></choice>, comme <choice><orig>moy</orig><reg>moi</reg></choice>,</l>
-               <l rend="indent">Tu ne serois<choice><orig></orig><reg></reg></choice> pas si malade.</l>
+               <l rend="indent">Tu ne <choice><orig>serois</orig><reg>serais</reg></choice> pas si malade.</l>
             </lg>
          </div>
          
