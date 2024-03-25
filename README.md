@@ -18,6 +18,6 @@ Le sujet porte sur trois fables de Jean de La Fontaine issues de l'ouvrage [Fabl
 - Une [feuille de style](XSLT-Fables.xsl) rédigée en XSLT servant à transformer le document TEI ;
 - Un [dossier](html) contenant le résultat de la transformation en HTML, correspondant à un site web comprenant :
   - Une [page d'accueil](html/fablesIndex.html) ;
-  - Une [lecture comparée](html/fable3.html) de _La Grenouille qui se veut faire aussi grosse que le Bœuf_ ;
-  - Une [lecture comparée](html/fable4.html) de _Les deux Mulets_ ;
-  - Une [lecture comparée](html/fable5.html) de _Le Loup et le Chien_ ;
+  - Une lecture comparée de [_La Grenouille qui se veut faire aussi grosse que le Bœuf_](html/fable3.html) ;
+  - Une lecture comparée de [_Les deux Mulets_](html/fable4.html) ;
+  - Une lecture comparée de [_Le Loup et le Chien_](html/fable5.html) ;
