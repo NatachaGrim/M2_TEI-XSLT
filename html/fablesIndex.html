@@ -1,0 +1,254 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Édition numérique de trois fables choisies de Jean de La Fontaine</title>
+      <meta name="description" content="Édition numérique de trois fables choisies de Jean de La Fontaine par La Fontaine, Jean de">
+      <meta name="author" content="Natacha Grim">
+      <style>
+                html {
+                scroll-behavior: smooth;
+                }
+                
+                body {
+                background-image: url('images/Illu-fond.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 1100px;
+                margin: auto;
+                font-family: Arial, Helvetica, sans-serif;
+                }
+                
+                @font-face {
+                font-family: heavyrain;
+                src: url(HeavyRain/HeavyRain_PERSONAL_USE_ONLY.ttf);
+                }
+                
+                h1 {
+                color: black;
+                font-family: heavyrain;
+                font-size: 40px;
+                letter-spacing: 2px;
+                text-shadow: 0 0 2px white;
+                
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 50px;
+                padding-right: 50px;
+                
+                margin-left: 60px;
+                margin-right: 60px;
+                }
+                
+                .title-fable {
+                margin-left: 35px;
+                margin-right: 35px;
+                }
+                
+                .box {
+                background-color:white;
+                box-shadow: 1px 1px 10px black;
+                padding:15px 75px 45px 75px;
+                }
+                
+                .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+                
+                .barre {
+                width: 100%;
+                box-shadow: 1px -1px 10px black;
+                background-color:rgba(153, 101, 21, 0.5);
+                text-shadow: 1px 1px 10px black;
+                position:sticky;
+                top:0;
+                z-index:3;
+                color: white;
+                }
+                
+                nav > ul {
+                list-style:none;
+                text-align:center;
+                
+                padding:0;
+                margin:0;
+                }
+                
+                ul > li {
+                display:inline-block;
+                padding:8px;
+                margin-top:10px;
+                margin-bottom:10px;
+                }
+                
+                nav a {
+                display:block;
+                justify-content:space-between;
+                padding:5px 1px 5px 1px;
+                }
+                
+                figcaption {
+                text-align: center;
+                font-size: 14px;
+                margin-top: 5px;
+                }
+                
+                ul > li > a {
+                text-decoration:none;
+                color:white;
+                transition: 0.3s;
+                }
+                
+                ol > li > a {
+                color:blue;
+                transition: 0.3s
+                }
+                
+                ul > li > a:hover {
+                text-shadow: 0 0 10px white;
+                color: black;
+                }
+                
+                ol > li > a:hover {
+                color: black;
+                }
+                
+                p {
+                text-align:justify;
+                font-size:17px;
+                }
+                
+                .text {
+                padding-left:30px;
+                text-align:justify;
+                }
+                
+                * {
+                line-height:1.5em;
+                }
+                
+                h1, h2 {
+                text-align:center;
+                }
+                
+                img,figcaption {
+                margin-left:-30px;
+                padding-right:10px;
+                }
+                
+                img {
+                filter: drop-shadow(0 0 0.75rem black);
+                }
+                
+                table {
+                border-collapse: collapse;
+                border: outset 5px;
+                margin: auto;
+                }
+                
+                th, td {
+                padding: 15px;
+                border: outset 5px;
+                background-color: rgba(255, 215, 0, 0.1);
+                }
+                
+                .boxEnd {
+                background-color: rgba(153, 101, 21, 0.7);
+                border: ridge white 2px;
+                box-shadow: 1px -1px 10px black;
+                text-align: center;
+                position: relative;
+                text-shadow: 2px 2px 30px black;
+                z-index: 1;
+                padding: 10px 0;
+                margin: 10px auto;
+                display: table;
+                width: auto;
+                color: white;
+                letter-spacing: 1px;
+                }
+                
+                .boxEnd > p {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                text-shadow: 2px 2px 5px black;
+                margin: 0;
+                padding: 0 10px;
+                font-size: small;
+                }
+                
+                .boxEnd > p > a {
+                text-decoration: none;
+                color: white;
+                transition: 0.3s;
+                }
+                
+                .boxEnd > p > a:hover {
+                text-shadow: 0 0 10px white;
+                color: black;
+                }
+            </style>
+   </head>
+   <body>
+      <header>
+         <h1>Fables choisies, mises en vers par M. de La Fontaine</h1>
+      </header>
+      <div class="barre">
+         <nav>
+            <ul>
+               <li><a href="#fables-encodees">Fables encodées</a></li>
+               <li><a href="https://gallica.bnf.fr/ark:/12148/btv1b8610825d/f1" target="_blank">Consulter l'édition encodée</a></li>
+               <li><a href="https://fr.wikipedia.org/wiki/Jean_de_La_Fontaine" target="_blank">Sur Jean de La Fontaine</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="box">
+         <h2>Encodage sur la modernisation de l'orthographe réalisé dans le cadre du Master 2 Technologies
+            Numériques Appliquées à l'Histoire
+            de l'École nationale des Chartes</h2>
+         <div class="container">
+            <div class="image"><img src="images/La-Fontaine.png" alt="Portrait de Jean de La Fontaine" width="210" id="trans7"><figcaption><em>Jean de La Fontaine par Hyacinthe Rigaud, en 1690.</em></figcaption>
+            </div>
+            <div class="text">
+               <p>L'œuvre de <b>Jean de La Fontaine</b> demeure un fleuron de la
+                  littérature classique française et continue, à ce titre, d'être
+                  enseignée aux plus jeunes comme aux étudiants dans le cadre
+                  d'études supérieures. Les fables ont <i>ipso facto</i>
+                  fait l'objet de quantité d'éditions. Aussi, nous avons choisi de
+                  prendre pour base une édition de 1668 et d'en moderniser
+                  l'orthographe afin d'en rendre la lecture accessible dès le plus
+                  jeune âge en conservant la syntaxe d'époque.</p>
+               
+               
+               <p>L'encodage a été réalisé sur la base de la version numérisée de l'ouvrage publié sur
+                  Galllica 
+                  en 2010. L'édition date de 1668 et a été produite par Claude Barbin, à Paris.</p> 
+               
+               <p>L'ensemble du texte a été retranscrit, exception faite des mots soumis à une césure
+                  de fin de ligne. 
+                  Les illustrations n'ont pas été prises en compte. Les unités logiques des vers ont
+                  été établies selon 
+                  leur schéma de rimes.</p>
+               
+               </div>
+         </div>
+         <h2 id="fables-encodees">Fables encodées</h2>
+         <ol>
+            <li><a href="fable3.html" target="_blank">FABLE TROISIÈME.
+                  La Grenouille qui se veut faire aussi grosse que le Bœuf.
+                  </a></li>
+            <li><a href="fable4.html" target="_blank">FABLE QUATRIÈME.
+                  Les deux Mulets.
+                  </a></li>
+            <li><a href="fable5.html" target="_blank">FABLE CINQUIÈME.
+                  Le Loup et le Chien.
+                  </a></li>
+         </ol>
+      </div>
+   </body>
+</html>
