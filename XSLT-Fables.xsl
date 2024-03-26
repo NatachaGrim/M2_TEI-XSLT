@@ -221,13 +221,14 @@
 
     <!-- FICHIERS DE SORTIE -->
 
-    <!-- Appel de tous les fichiers de sortie -->
+    <!-- Appel de tous les templates de fichiers de sortie -->
     <xsl:template match="/">
         <xsl:call-template name="index"/>
         <xsl:call-template name="fables"/>
     </xsl:template>
     
     <!-- PAGE D'ACCUEIL -->
+    
     <xsl:template name="index">
         <xsl:result-document href="html/{$index}">
             <html lang="fr">
@@ -287,17 +288,15 @@
         </xsl:result-document>
     </xsl:template>
     
-    
     <!-- PAGE DES FABLES -->
     
     <xsl:template name="fables">
         <!-- Boucle générant un fichier HTML par fable -->
         <xsl:for-each select="//body/div">
             <!-- Compteur permettant de générer le nom des fichiers de sortie et les liens de navigation interne -->
-            <xsl:variable name="n">
-                <xsl:number count="div" from="body"/>
+            <xsl:variable name="n" select="position() + 2">
             </xsl:variable>
-            <xsl:result-document href="{concat('html/fable', $n+2, '.html')}">
+            <xsl:result-document href="{concat('html/fable', $n, '.html')}">
                 <xsl:copy-of select="$header"/>
                 <html lang="fr">
                     <body>
@@ -338,13 +337,13 @@
                             <!-- Si une fable précède celle de la page courante, création d'un lien de renvoi -->
                             <xsl:if test="preceding-sibling::div">
                                 <div class="boxEnd">
-                                    <p><a href="{concat('fable', count(preceding-sibling::div) + 2, '.html')}" target="_blank">◄ Page précédente : <i><xsl:apply-templates select="preceding-sibling::div[1]/head"/></i></a></p>
+                                    <p><a href="{concat('fable', $n - 1, '.html')}" target="_blank">◄ Page précédente : <i><xsl:apply-templates select="preceding-sibling::div[1]/head"/></i></a></p>
                                 </div>
                             <!-- Si une fable succède celle de la page courante, création d'un lien de renvoi -->
                             </xsl:if>
                             <xsl:if test="following-sibling::div">
                                 <div class="boxEnd">
-                                    <p><a href="{concat('fable', count(preceding-sibling::div) + 4, '.html')}" target="_blank">► Page suivante : <i><xsl:apply-templates select="following-sibling::div[1]/head"/></i></a></p>
+                                    <p><a href="{concat('fable', $n + 1, '.html')}" target="_blank">► Page suivante : <i><xsl:apply-templates select="following-sibling::div[1]/head"/></i></a></p>
                                 </div>
                             </xsl:if>      
                         </footer>
