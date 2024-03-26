@@ -20,4 +20,4 @@ Le sujet porte sur trois fables de Jean de La Fontaine issues de l'ouvrage [Fabl
   - Une [page d'accueil](html/fablesIndex.html) ;
   - Une lecture comparée de [_La Grenouille qui se veut faire aussi grosse que le Bœuf_](html/fable3.html) ;
   - Une lecture comparée de [_Les deux Mulets_](html/fable4.html) ;
-  - Une lecture comparée de [_Le Loup et le Chien_](html/fable5.html) ;
+  - Une lecture comparée de [_Le Loup et le Chien_](html/fable5.html).
