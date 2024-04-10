@@ -3,8 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Encodage en XML-TEI d'une édition de 1668 de fables choisies de Jean de La
-               Fontaine.</title>
+            <title>Encodage en XML-TEI d'une édition de 1668 de fables choisies de Jean de La Fontaine.</title>
             <author>Natacha Grim</author>
          </titleStmt>
          <publicationStmt>
@@ -12,10 +11,8 @@
                Technologies Numériques Appliquées à l'Histoire de l'École nationale des Chartes</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Derived from <ref
-                  target="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">base
-                  odd</ref> after an analysis of 1 files in
-               file:/home/port-pret-etu01/Bureau/M2_TEI-XSLT/</p>
+            <p>Derived from <ref target="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
+               base odd</ref> after an analysis of 1 files in file:/home/port-pret-etu01/Bureau/M2_TEI-XSLT/</p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
@@ -23,18 +20,17 @@
       <body>
          <div1>
             <div2>
-               <head>Présentation de l'encodage de fables choisies, msies en vers par Jean de La
+               <head>Présentation de l'encodage de fables choisies, mises en vers par Jean de La
                   Fontaine.</head>
                <p>L'ambition du présent document est d'expliciter les principes d'encodage de notre
                   projet, de mettre en lumière nos choix d'éléments et de mettre en exergue ses
                   potentielles exploitations scientifiques et éditoriales.</p>
                <p>L'œuvre de Jean de La Fontaine demeure un fleuron de la littérature classique
-                  française et continue, à ce titre,d'être enseignée aux plus jeunes comme aux
-                  étudiants dans le cadre d'études supérieures. Les fables ont <emph>ipso
-                     facto</emph> fait l'objet de quantité d'éditions. Aussi, nous avons choisi de
-                  prendre pour base une édition de 1668 et d'en moderniser l'orthographe afin d'en
-                  rendre la lecture accessible dès le plus jeune âge en conservant la syntaxe
-                  d'époque.</p>
+                  française et continue, à ce titre, d'être enseignée aux plus jeunes comme aux
+                  étudiants dans le cadre d'études supérieures. Les fables ont <emph>ipso facto</emph>
+                  fait l'objet de quantité d'éditions. Aussi, nous avons choisi de prendre pour base
+                  une édition de 1668 et d'en moderniser l'orthographe afin d'en rendre la lecture
+                  accessible dès le plus jeune âge en conservant la syntaxe d'époque.</p>
                <p>Précisons que cette entreprise de modernisation ne concerne bel et bien que les
                   formes orthographiques. Nous ne travaillerons ni sur la syntaxe ni sur les
                   majuscules afin de rendre compte du contenu de cet ouvrage édité en 1668 en
@@ -55,38 +51,39 @@
                   Jean de La Fontaine n'a pas et ne fera pas l'objet d'un travail d'encodage de
                   notre part.</p>
                <p>Les résultats de l'encodage pourront faire l'objet de diverses exploitations.
-                  Citons en guise d'exemple : 
+                  Citons en guise d'exemple :
                   <list>
                      <item>Travailler sur les évolutions orthographiques ;</item>
                      <item>Produire une étude comparée des différentes éditions des fables de Jean
                         de La Fontaine ;</item>
                      <item>Soutenir la création d'un outil de recherche scientifique sur la
                         structure d'une œuvre versifiée ;</item>
-                  </list></p>
+                  </list>
+               </p>
             </div2>
             <div2>
                <head>Structure du fichier TEI</head>
                <div3>
                   <head>Structure du <gi>teiHeader</gi></head>
                   <p>Le <gi>teiHeader</gi> est ici composé de deux éléments enfants : <specList>
-                        <specDesc key="fileDesc"/>
-                        <specDesc key="encodingDesc"/>
-                     </specList>
+                     <specDesc key="fileDesc"/>
+                     <specDesc key="encodingDesc"/>
+                  </specList>
                   </p>
                   <div4>
                      <head>Structure du <gi>fileDesc</gi></head>
                      <p>Le <gi>fileDesc</gi> contient ici trois éléments enfants : <specList>
-                           <specDesc key="titleStmt"/>
-                           <specDesc key="publicationStmt"/>
-                           <specDesc key="sourceDesc"/>
-                        </specList>
+                        <specDesc key="titleStmt"/>
+                        <specDesc key="publicationStmt"/>
+                        <specDesc key="sourceDesc"/>
+                     </specList>
                      </p>
                      <p>Le <gi>titleStmt</gi> est composé du titre du document d'encodage,
-                           <gi>title</gi>, du nom de l'auteur, <gi>author</gi>, du nom de l'éditeur,
-                           <gi>editor</gi>. La responsabilité de l'encodage est également indiquée
+                        <gi>title</gi>, du nom de l'auteur, <gi>author</gi>, du nom de l'éditeur,
+                        <gi>editor</gi>. La responsabilité de l'encodage est également indiquée
                         grâce à l'élément <gi>respStmt</gi>. Ce sont là les premières informations
-                        majeures qu'il convient d'indiquer dans un document TEI : <egXML
-                           xmlns="http://www.tei-c.org/ns/Examples">
+                        majeures qu'il convient d'indiquer dans un document TEI :
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <titleStmt>
                               <title>Édition numérique de trois fables choisies de Jean de La
                                  Fontaine</title>
@@ -103,7 +100,8 @@
                         publication du document numérique, en l'occurrence, produit dans le cadre
                         d'un travail d'études supérieures.</p>
                      <p>Les informations sur la source sont contenues dans l'élément
-                           <gi>sourceDesc</gi> et réparties au sein de deux sous-éléments : <specList>
+                        <gi>sourceDesc</gi> et réparties au sein de deux sous-éléments :
+                        <specList>
                            <specDesc key="bibl"/>
                            <specDesc key="msDesc"/>
                         </specList> Les informations relatives à l'édition (auteur, éditeur,
@@ -111,7 +109,7 @@
                         avons également renseigné la "portée" de notre encodage, ici des pages 7 à
                         12 de l'édition. Le <gi>msDesc</gi> permet quant à lui d'identifier d'un
                         point de vue plus matériel le lieu de conservation de la source de travail :
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <msDesc>
                               <msIdentifier>
                                  <country>France</country>
@@ -136,26 +134,27 @@
                      enfant de <gi>text</gi>. Notre travail d'encodage concerne présentement trois
                      fables et l'utilisation des éléments suit la même logique.</p>
                   <p>Précisons que nous n'avons pas indiqué les changements de page avec l'élément
-                     auto-fermant <gi>pb</gi>. De la même manière que nous n'avons pas encodé les 
-                     césures de mots, nous faisons le choix de ne pas rendre compte de ces éléments 
-                     de mise en page, dans la mesure où le texte des fables nous importe plus que 
+                     auto-fermant <gi>pb</gi>. De la même manière que nous n'avons pas encodé les
+                     césures de mots, nous faisons le choix de ne pas rendre compte de ces éléments
+                     de mise en page, dans la mesure où le texte des fables nous importe plus que
                      la transcription davantage matérielle et codicologique de cette édition.</p>
                   <p>Également, nous avons conservé l'effet d'indentation appliqué à certains vers.
                      Pour le signaler, nous ajoutons l'attribut <att>rend</att> dont la valeur est
-                        "<val>indent</val>". Si un vers, noté <gi>l</gi> ne possède pas l'attribut,
-                     il n'est pas identé.</p>
+                     "<val>indent</val>". Si un vers, noté <gi>l</gi> ne possède pas l'attribut,
+                     il n'est pas indenté.</p>
                   <div4>
                      <head>Structure du <gi>body</gi></head>
                      <p>Précisons d'emblée l'utilisation de deux éléments, <gi>emph</gi> et
-                           <gi>lb</gi> afin de rendre compte de traitements typographiques et de
+                        <gi>lb</gi> afin de rendre compte de traitements typographiques et de
                         mise en page. L'élément <gi>lb</gi> nous permet d'indiquer un retour
-                        chariot, exemplairement à l'œuvre dans les titres des fables : <egXML
-                           xmlns="http://www.tei-c.org/ns/Examples">
+                        chariot, exemplairement à l'œuvre dans les titres des fables :
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <head rend="alignCenter">FABLE
-                                    <choice><orig>QUATRIESME</orig><reg>QUATRIÈME</reg></choice>.<lb/>
+                              <choice><orig>QUATRIESME</orig><reg>QUATRIÈME</reg></choice>.<lb/>
                               <emph>Les deux Mulets.</emph>
                            </head>
-                        </egXML> Nous avons fait le choix de conserver cet effet de titre en deux
+                        </egXML>
+                        Nous avons fait le choix de conserver cet effet de titre en deux
                         temps. L'élément <gi>emph</gi> nous permet quant à lui de reproduire une
                         mise en italique de certains termes.</p>
                      <p>Également, l'auteur utilise à de nombreuses reprises l'esperluette. Celle-ci
@@ -164,7 +163,7 @@
                      <div5>
                         <head>Structure d'une fable</head>
                         <p>dans le corps du <gi>body</gi>, chaque fable est contenue dans une
-                              <gi>div</gi>, laquelle possède un attribut obligatoire
+                           <gi>div</gi>, laquelle possède un attribut obligatoire
                            <att>type</att>. Celui-ci permet de préciser le type de texte transcrit
                            et peut servir à identifier plus précisément la structure logique d'un
                            ouvrage source. Dans la mesure où nous n'avons encodé que trois fables,
@@ -172,32 +171,32 @@
                         <p>Chaque fable ayant un titre, nous utilisons l'élément <gi>head</gi> pour
                            le signaler. Nous précisons l'alignement du titre dans la page grâce à
                            l'attribut <gi>rend</gi>, lequel peut exemplairement prendre les valeurs
-                              <val>alignCenter</val>, <val>alignRight</val> et <val>alignLeft</val>.
+                           <val>alignCenter</val>, <val>alignRight</val> et <val>alignLeft</val>.
                            La mise en page de l'ouvrage centre les titres des fables que nous avons
                            encodées, impliquant l'utilisation de la valeur
                            <val>alignCenter</val>.</p>
                         <p>Les fables de Jean de La Fontaine ont une forme versifiée mais ne sont
                            pas structurées en strophes identifiables. Aussi, nous avons fait le
                            choix d'encadrer des ensembles de vers, notés <gi>l</gi> par l'élément
-                              <gi>lg</gi> et ce, sur la base de schémas de rimes. C'est pourquoi
+                           <gi>lg</gi> et ce, sur la base de schémas de rimes. C'est pourquoi
                            l'attribut <att>rhyme</att> est obligatoire pour l'élément <gi>lg</gi>.
                            Sa valeur permet de saisir le schéma identifié, par exemple
-                              "<val>abab</val>".</p>
+                           "<val>abab</val>".</p>
                         <p>Enfin, les mots faisant l'objet d'une modernisation sont signalés grâce à
                            un ensemble de trois éléments : <gi>choice</gi>, lequel contient les
                            éléments <gi>orig</gi> et <gi>reg</gi>. La balise <gi>orig</gi> contient
                            le texte original et <gi>reg</gi> sa version modernisée et normalisée :
-                              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <lg rhyme="aabb">
                                  <l rend="indent">L’attaquer, le mettre en quartiers,</l>
                                  <l rend="indent">Sire Loup
-                                          l’<choice><orig>eust</orig><reg>eût</reg></choice> fait
+                                    l’<choice><orig>eust</orig><reg>eût</reg></choice> fait
                                     volontiers :</l>
                                  <l rend="indent">Mais il
-                                          <choice><orig>faloit</orig><reg>fallait</reg></choice>
+                                    <choice><orig>faloit</orig><reg>fallait</reg></choice>
                                     livrer bataille ;</l>
                                  <l rend="indent">Et le Mâtin
-                                          <choice><orig>estoit</orig><reg>était</reg></choice> de
+                                    <choice><orig>estoit</orig><reg>était</reg></choice> de
                                     taille</l>
                               </lg>
                            </egXML></p>
@@ -210,10 +209,11 @@
             <head>Éléments utilisés</head>
             <schemaSpec ident="oddbyexample" start="TEI ">
                <moduleRef key="tei"/>
-               
+
                <!-- Règle sur le contenu de l'élément div -->
                <elementSpec ident="div" mode="change">
-                  <desc xml:lang="fr">L'élément div contient dans cet ordre : maximum un élément head et au moins un élément lg.</desc>
+                  <desc xml:lang="fr">L'élément div contient dans cet ordre : maximum un
+                     élément head et au moins un élément lg.</desc>
                   <content>
                      <sequence>
                         <elementRef key="head" maxOccurs="1"/>
@@ -224,7 +224,7 @@
                      <attDef ident="type" mode="change"/>
                   </attList>
                </elementSpec>
-               
+
                <!-- Règle sur le contenu de l'élément lb -->
                <elementSpec ident="lb" mode="change">
                   <desc xml:lang="fr">L'élément lb doit être obligatoirement vide</desc>
@@ -232,10 +232,11 @@
                      <empty/>
                   </content>
                </elementSpec>
-               
+
                <!-- Règle sur le contenu et les attributs de l'élément lg -->
                <elementSpec ident="lg" mode="change">
-                  <desc xml:lang="fr">L'élément lg contient au moins un élément l et possède obligatoirement un attribut rhyme</desc>
+                  <desc xml:lang="fr">L'élément lg contient au moins un élément l et possède
+                     obligatoirement un attribut rhyme</desc>
                   <content>
                      <elementRef key="l" minOccurs="1" maxOccurs="unbounded"/>
                   </content>
@@ -244,14 +245,15 @@
                      <attDef ident="type" mode="delete"/>
                   </attList>
                </elementSpec>
-               
+
                <!-- Règle sur le contenu de l'attribut rhyme -->
                <constraintSpec ident="attReq" scheme="schematron">
                   <constraint>
-                     <s:report test="matches(@rhyme, '^[0-9A-Z]+$')">L'attribut rhyme ne doit avoir pour valeur ni un chiffre ni une lettre en majuscule.</s:report>
+                     <s:report test="matches(@rhyme, '^[0-9A-Z]+$')">L'attribut rhyme ne doit avoir pour
+                        valeur ni un chiffre ni une lettre en majuscule.</s:report>
                   </constraint>
                </constraintSpec>
-               
+
                <classRef key="att.textCritical"/>
                <classRef key="model.rdgLike"/>
                <classRef key="model.rdgPart"/>
@@ -326,7 +328,7 @@
                <classRef key="att.identified"/>
                <classRef key="model.contentPart"/>
                <moduleRef key="tagdocs"
-                  include="att gi val specList specDesc classRef moduleRef schemaSpec elementSpec classSpec attList attDef valItem valList"/>
+                          include="att gi val specList specDesc classRef moduleRef schemaSpec elementSpec classSpec attList attDef valItem valList"/>
                <elementSpec ident="att" mode="change">
                   <attList>
                      <attDef ident="scheme" mode="delete"/>
@@ -531,7 +533,7 @@
                </classSpec>
                <!--Checking module core-->
                <moduleRef key="core"
-                  include="p emph choice reg orig date ref list item head lb author editor respStmt resp title biblScope bibl l lg"/>
+                          include="p emph choice reg orig date ref list item head lb author editor respStmt resp title biblScope bibl l lg"/>
                <elementSpec ident="reg" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>
@@ -614,7 +616,7 @@
                <!--Checking module figures-->
                <!--Checking module header-->
                <moduleRef key="header"
-                  include="teiHeader fileDesc titleStmt publicationStmt idno sourceDesc encodingDesc projectDesc"/>
+                          include="teiHeader fileDesc titleStmt publicationStmt idno sourceDesc encodingDesc projectDesc"/>
                <elementSpec ident="idno" mode="change">
                   <attList>
                      <attDef ident="calendar" mode="delete"/>

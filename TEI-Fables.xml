@@ -13,8 +13,8 @@
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <p>Encodage sur la modernisation de l'orthographe réalisée dans le cadre du Master 2 Technologies Numériques Appliquées à l'Histoire
-            de l'École nationale des Chartes</p>
+            <p>Encodage sur la modernisation de l'orthographe réalisée dans le cadre du Master 2 Technologies
+               Numériques Appliquées à l'Histoire de l'École nationale des chartes</p>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -37,7 +37,7 @@
       </fileDesc>
      <encodingDesc>
         <projectDesc>
-           <p>L'encodage a été réalisé sur la base de la version numérisée de l'ouvrage publié sur Galllica 
+           <p>L'encodage a été réalisé sur la base de la version numérisée de l'ouvrage publié sur Gallica
               en 2010. L'édition date de 1668 et a été produite par Claude Barbin, à Paris.</p> 
            <p>L'ensemble du texte a été retranscrit, exception faite des mots soumis à une césure de fin de ligne. 
               Les illustrations n'ont pas été prises en compte. Les unités logiques des vers ont été établies selon 
@@ -49,8 +49,10 @@
   <text>
       <body>
          <div type="fable">
-            <head rend="alignCenter">FABLE <choice><orig>TROISIESME</orig><reg>TROISIÈME</reg></choice>.<lb/>
-               <emph>La <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> qui se veut faire aussi<lb/>grosse que le Bœuf.</emph>
+            <head rend="alignCenter">
+               FABLE <choice><orig>TROISIESME</orig><reg>TROISIÈME</reg></choice>.
+               <lb/><emph>La <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> qui se veut faire aussi
+               <lb/>grosse que le Bœuf.</emph>
             </head>
             <lg rhyme="abab">
                <l rend="indent">Une <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> <choice><orig>vid</orig><reg>vit</reg></choice> un Bœuf,</l>
