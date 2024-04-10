@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+COMMENTTAIRE
+Encodage et documentation vraiment légers, avec un header du document TEI bien déplumé
+Balisage attentif des modernisations : on aurait aimé une justification un peu plus développée dans l'ODD
+J'ai ajouté qqs entités pour faciliter la lecture
+Il manquait l'appel au schematron ce qui masquait certaines erreurs
+-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:s="http://purl.oclc.org/dsdl/schematron">
    <teiHeader>
       <fileDesc>
@@ -27,7 +36,7 @@
                   potentielles exploitations scientifiques et éditoriales.</p>
                <p>L'œuvre de Jean de La Fontaine demeure un fleuron de la littérature classique
                   française et continue, à ce titre, d'être enseignée aux plus jeunes comme aux
-                  étudiants dans le cadre d'études supérieures. Les fables ont <emph>ipso facto</emph>
+                  étudiants dans le cadre d'études supérieures. Les fables ont <foreign xml:lang="lat">ipso facto</foreign>
                   fait l'objet de quantité d'éditions. Aussi, nous avons choisi de prendre pour base
                   une édition de 1668 et d'en moderniser l'orthographe afin d'en rendre la lecture
                   accessible dès le plus jeune âge en conservant la syntaxe d'époque.</p>
@@ -227,6 +236,7 @@
 
                <!-- Règle sur le contenu de l'élément lb -->
                <elementSpec ident="lb" mode="change">
+                  <!--C'est déjà le cas en TEI-->
                   <desc xml:lang="fr">L'élément lb doit être obligatoirement vide</desc>
                   <content>
                      <empty/>
@@ -238,21 +248,24 @@
                   <desc xml:lang="fr">L'élément lg contient au moins un élément l et possède
                      obligatoirement un attribut rhyme</desc>
                   <content>
+                     <!-- OK -->
                      <elementRef key="l" minOccurs="1" maxOccurs="unbounded"/>
                   </content>
+                  
+                  <!-- Règle sur le contenu de l'attribut rhyme -->
+                  <!-- CORRECTION : le constraintSpec doit être placé dans un elementSpec -->
+                  <constraintSpec ident="attReq" scheme="schematron">
+                     <constraint>
+                        <s:report test="matches(@rhyme, '^[0-9A-Z]+$')">L'attribut rhyme ne doit avoir pour
+                           valeur ni un chiffre ni une lettre en majuscule.</s:report>
+                     </constraint>
+                  </constraintSpec>
+                  
                   <attList>
                      <attDef ident="rhyme" mode="change" usage="req"/>
                      <attDef ident="type" mode="delete"/>
                   </attList>
                </elementSpec>
-
-               <!-- Règle sur le contenu de l'attribut rhyme -->
-               <constraintSpec ident="attReq" scheme="schematron">
-                  <constraint>
-                     <s:report test="matches(@rhyme, '^[0-9A-Z]+$')">L'attribut rhyme ne doit avoir pour
-                        valeur ni un chiffre ni une lettre en majuscule.</s:report>
-                  </constraint>
-               </constraintSpec>
 
                <classRef key="att.textCritical"/>
                <classRef key="model.rdgLike"/>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="out/ODD_TEI-Fables.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/ODD_TEI-Fables.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!DOCTYPE TEI [
+        <!ENTITY et '<choice><orig>&amp;</orig><reg>et</reg></choice>' >
+        <!ENTITY i '<choice><orig>y</orig><reg>i</reg></choice>' >
+        <!ENTITY ai '<choice><orig>oi</orig><reg>ai</reg></choice>' >
+        <!ENTITY ê '<choice><orig>es</orig><reg>ê</reg></choice>' >
+        <!ENTITY â '<choice><orig>as</orig><reg>â</reg></choice>' >
+        <!ENTITY û '<choice><orig>us</orig><reg>û</reg></choice>' >
+        <!ENTITY é '<choice><orig>e</orig><reg>é</reg></choice>' >
+]>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
@@ -56,23 +68,23 @@
             </head>
             <lg rhyme="abab">
                <l rend="indent">Une <choice><orig>Grenoüille</orig><reg>Grenouille</reg></choice> <choice><orig>vid</orig><reg>vit</reg></choice> un Bœuf,</l>
-               <l rend="indent">Qui <choice><orig>luy</orig><reg>lui</reg></choice> sembla de belle taille.</l>
-               <l>Elle qui n’<choice><orig>estoit</orig><reg>était</reg></choice> pas grosse en tout comme un œuf,</l>
-               <l>Envieuse s’<choice><orig>estend</orig><reg>étend</reg></choice>, <choice><orig>&amp;</orig><reg>et</reg></choice> s’enfle, <choice><orig>&amp;</orig><reg>et</reg></choice> se travaille,</l>
+               <l rend="indent">Qui lu&i; sembla de belle taille.</l>
+               <l>Elle qui n’est&ai;t pas grosse en tout comme un œuf,</l>
+               <l>Envieuse s’&é;tend, &et; s’enfle, &et; se travaille,</l>
             </lg>
             <lg rhyme="aa">
                <l rend="indent">Pour égaler l’animal en grosseur ;</l>
                <l rend="indent">Disant, Regardez bien ma sœur,</l>
             </lg>
             <lg rhyme="abab">
-               <l>Est-ce assez ? Dites-<choice><orig>moy</orig><reg>moi</reg></choice> : N’y suis-je point encore ?</l>
-               <l><choice><orig>Nenny</orig><reg>Nenni</reg></choice>. M’y <choice><orig>voicy</orig><reg>voici</reg></choice> donc ? Point du tout. M’y <choice><orig>voila</orig><reg>voilà</reg></choice> ?</l>
-               <l>Vous n’en approchez point. La <choice><orig>chetive</orig><reg>chétive</reg></choice> <choice><orig>pecore</orig><reg>pécore</reg></choice></l>
+               <l>Est-ce assez ? Dites-mo&i; : N’y suis-je point encore ?</l>
+               <l>Nenn&i;. M’y voic&i; donc ? Point du tout. M’y <choice><orig>voila</orig><reg>voilà</reg></choice> ?</l>
+               <l>Vous n’en approchez point. La ch&é;tive p&é;core</l>
                <l rend="indent">S’enfla si bien qu’elle creva.</l>
             </lg>
             <lg rhyme="abba">
                <l>Le monde est plein de gens qui ne sont pas plus sages :</l>
-               <l>Tout Bourgeois veut <choice><orig>bastir</orig><reg>bâtir</reg></choice> comme les grands Seigneurs ;</l>
+               <l>Tout Bourgeois veut b&â;tir comme les grands Seigneurs ;</l>
                <l>Tout petit Prince a des Ambassadeurs ;</l>
                <l rend="indent">Tout Marquis veut avoir des Pages.</l>
             </lg>
@@ -83,77 +95,77 @@
                <emph>Les deux Mulets.</emph>
             </head>
             <lg rhyme="abbaa">
-               <l>Deux Mulets <choice><orig>cheminoient</orig><reg>cheminaient</reg></choice> ; l’un d’avoine chargé ;</l>
+               <l>Deux Mulets chemin&ai;ent ; l’un d’avoine chargé ;</l>
                <l>L’autre portant l’argent de la Gabelle.</l>
-               <l><choice><orig>Celuy-cy</orig><reg>Celui-ci</reg></choice> glorieux d’une charge si belle,</l>
-               <l>N’<choice><orig>eust</orig><reg>eût</reg></choice> voulu pour beaucoup en <choice><orig>estre</orig><reg>être</reg></choice> soulagé.</l>
-               <l rend="indent">Il <choice><orig>marchoit</orig><reg>marchait</reg></choice> d’un pas relevé,</l>
+               <l>Celu&i;-c&i; glorieux d’une charge si belle,</l>
+               <l>N’e&û;t voulu pour beaucoup en &ê;tre soulagé.</l>
+               <l rend="indent">Il march&ai;t d’un pas relevé,</l>
             </lg>
             <lg rhyme="abbaab">
-               <l rend="indent">Et <choice><orig>faisoit</orig><reg>faisait</reg></choice> sonner la sonnette;</l>
-               <l rend="indent">Quand l’<choice><orig>ennemy</orig><reg>ennemi</reg></choice> se <choice><orig>presentant</orig><reg>présentant</reg></choice>,</l>
-               <l rend="indent">Comme il en <choice><orig>vouloit</orig><reg>voulait</reg></choice> à l’argent.</l>
+               <l rend="indent">Et fais&ai;t sonner la sonnette;</l>
+               <l rend="indent">Quand l’ennem&i; se pr&é;sentant,</l>
+               <l rend="indent">Comme il en voul&ai;t à l’argent.</l>
                <l>Sur le Mulet du fisc une troupe se jette;</l>
-               <l rend="indent">Le saisit au frein, <choice><orig>&amp;</orig><reg>et</reg></choice> l’<choice><orig>arreste</orig><reg>arrête</reg></choice>.</l>
+               <l rend="indent">Le saisit au frein, &et; l’arr&ê;te.</l>
                <l rend="indent">Le Mulet se défendant</l>
             </lg>
             <lg rhyme="abab">
-               <l>Se sent percer de coups, il <choice><orig>gemit</orig><reg>gémit</reg></choice>, il <choice><orig>soûpire</orig><reg>soupire</reg></choice> :</l>
-               <l>Est-ce donc là, dit-il, ce qu’on m’<choice><orig>avoit</orig><reg>avait</reg></choice> promis ?</l>
+               <l>Se sent percer de coups, il g&é;mit, il <choice><orig>soûpire</orig><reg>soupire</reg></choice> :</l>
+               <l>Est-ce donc là, dit-il, ce qu’on m’av&ai;t promis ?</l>
                <l>Ce Mulet qui me suit du danger se retire ;</l>
-               <l rend="indent">Et <choice><orig>moy</orig><reg>moi</reg></choice> j’y tombe <choice><orig>&amp;</orig><reg>et</reg></choice> je <choice><orig>peris</orig><reg>péris</reg></choice>.</l>
+               <l rend="indent">Et mo&i; j’y tombe &et; je p&é;ris.</l>
             </lg>
             <lg rhyme="abba">
-               <l rend="indent"><choice><orig>Amy</orig><reg>Ami</reg></choice>, <choice><orig>luy</orig><reg>lui</reg></choice> dit son camarade,</l>
-               <l>Il n’est pas <choice><orig>toûjours</orig><reg>toujours</reg></choice> bon d’avoir un haut <choice><orig>employ</orig><reg>emploi</reg></choice> :</l>
-               <l>Si tu n’<choice><orig>avois</orig><reg>avais</reg></choice> <choice><orig>servy</orig><reg>servi</reg></choice> qu’un <choice><orig>Meusnier</orig><reg>Meunier</reg></choice>, comme <choice><orig>moy</orig><reg>moi</reg></choice>,</l>
-               <l rend="indent">Tu ne serois<choice><orig></orig><reg></reg></choice> pas si malade.</l>
+               <l rend="indent">Am&i;, lu&i; dit son camarade,</l>
+               <l>Il n’est pas <choice><orig>toûjours</orig><reg>toujours</reg></choice> bon d’avoir un haut emplo&i; :</l>
+               <l>Si tu n’av&ai;s serv&i; qu’un <choice><orig>Meusnier</orig><reg>Meunier</reg></choice>, comme mo&i;,</l>
+               <l rend="indent">Tu ne ser&ai;s pas si malade.</l>
             </lg>
          </div>
          
          <div type="fable">
             <head rend="alignCenter">FABLE <choice><orig>CINQUIESME</orig><reg>CINQUIÈME</reg></choice>.<lb/>
-               <emph>Le Loup <choice><orig>&amp;</orig><reg>et</reg></choice> le Chien.</emph>
+               <emph>Le Loup &et; le Chien.</emph>
             </head>
             <lg rhyme="abab">
-               <l rend="indent">Un Loup n’<choice><orig>avoit</orig><reg>avait</reg></choice> que les os <choice><orig>&amp;</orig><reg>et</reg></choice> la peau ;</l>
-               <l rend="indent">Tant que les Chiens <choice><orig>faisoient</orig><reg>faisaient</reg></choice> bonne garde.</l>
+               <l rend="indent">Un Loup n’av&ai;t que les os &et; la peau ;</l>
+               <l rend="indent">Tant que les Chiens fais&ai;ent bonne garde.</l>
                <l>Ce Loup rencontre un Dogue aussi puissant que beau,</l>
-               <l>Gras, <choice><orig>poly</orig><reg>poli</reg></choice>, qui s’<choice><orig>estoit</orig><reg>était</reg></choice> fourvoyé par mégarde.</l>
+               <l>Gras, pol&i;, qui s’est&ai;t fourvoyé par mégarde.</l>
             </lg>
             <lg rhyme="aabb">
                <l rend="indent">L’attaquer, le mettre en quartiers,</l>
-               <l rend="indent">Sire Loup l’<choice><orig>eust</orig><reg>eût</reg></choice> fait volontiers :</l>
-               <l rend="indent">Mais il <choice><orig>faloit</orig><reg>fallait</reg></choice> livrer bataille ;</l>
-               <l rend="indent">Et le Mâtin <choice><orig>estoit</orig><reg>était</reg></choice> de taille</l>   
+               <l rend="indent">Sire Loup l’e&û;t fait volontiers :</l>
+               <l rend="indent">Mais il fa<choice><orig>l</orig><reg>ll</reg></choice>&ai;t livrer bataille ;</l>
+               <l rend="indent">Et le Mâtin est&ai;t de taille</l>
             </lg>
             <lg rhyme="aaa">
                <l rend="indent">A se défendre hardiment.</l>
                <l rend="indent">Le Loup donc l’aborde humblement,</l>
-               <l>Entre en propos, <choice><orig>&amp;</orig><reg>et</reg></choice> <choice><orig>luy</orig><reg>lui</reg></choice> fait compliment</l>
+               <l>Entre en propos, &et; lu&i; fait compliment</l>
             </lg>
             <lg rhyme="aa">
                <l rend="indent">Sur son embonpoint qu’il admire.</l>
                <l rend="indent">Il ne tiendra qu’à vous, beau Sire,</l>
             </lg>
             <lg rhyme="aabb">
-               <l>D’<choice><orig>estre</orig><reg>être</reg></choice> aussi gras que <choice><orig>moy</orig><reg>moi</reg></choice>, <choice><orig>luy</orig><reg>lui</reg></choice> repartit le Chien :</l>
+               <l>D’&ê;tre aussi gras que mo&i;, lu&i; repartit le Chien :</l>
                <l rend="indent">Quittez les bois, vous ferez bien :</l>
                <l rend="indent">Vos pareils y sont miserables,</l>
-               <l rend="indent">Cancres, haires, <choice><orig>&amp;</orig><reg>et</reg></choice> pauvres diables ;</l>
+               <l rend="indent">Cancres, haires, &et; pauvres diables ;</l>
             </lg>
             <lg rhyme="abba">
                <l>Dont la condition est de mourir de faim.</l>
-               <l>Car <choice><orig>quoy</orig><reg>quoi</reg></choice> ? Rien d’assuré, point de franche lipée ;</l>
+               <l>Car quo&i; ? Rien d’assuré, point de franche lipée ;</l>
                <l rend="indent">Tout à la pointe de l’épée:</l>
-               <l>Suivez-<choice><orig>moy</orig><reg>moi</reg></choice> ; vous aurez un bien meilleur destin.</l>
+               <l>Suivez-mo&i; ; vous aurez un bien meilleur destin.</l>
             </lg>
             <lg rhyme="abbaa">
                <l rend="indent">Le Loup reprit : Que me faudra-t-il faire ?</l>
                <l>Presque rien, dit le Chien ; donner la chasse aux gens</l>
-               <l rend="indent"><choice><orig>Portans</orig><reg>Portant</reg></choice> <choice><orig>bastons</orig><reg>bâtons</reg></choice>, <choice><orig>&amp;</orig><reg>et</reg></choice> <choice><orig>mendians</orig><reg>mendiants</reg></choice> ;</l>
-               <l><choice><orig>Flater</orig><reg>Flatter</reg></choice> ceux du logis ; à son <choice><orig>Maistre</orig><reg>Maître</reg></choice> complaire ;</l>
-               <l rend="indent">Moyennant <choice><orig>quoy</orig><reg>quoi</reg></choice> <choice><orig>vostre</orig><reg>votre</reg></choice> salaire</l>
+               <l rend="indent"><choice><orig>Portans</orig><reg>Portant</reg></choice> b&â;tons, &et; <choice><orig>mendians</orig><reg>mendiants</reg></choice> ;</l>
+               <l>Fla<choice><orig>t</orig><reg>tt</reg></choice>er ceux du logis ; à son Ma&i;tre complaire ;</l>
+               <l rend="indent">Moyennant quo&i; <choice><orig>vostre</orig><reg>votre</reg></choice> salaire</l>
             </lg>
             <lg rhyme="aa">
                <l>Sera force reliefs de toutes les façons ;</l>
@@ -166,10 +178,10 @@
                <l>Chemin faisant il <choice><orig>vid</orig><reg>vit</reg></choice> le col du Chien, pelé :</l>
             </lg>
             <lg rhyme="abab">
-               <l>Qu’est-ce là ? <choice><orig>Luy</orig><reg>Lui</reg></choice> dit-il. Rien. <choice><orig>Quoy</orig><reg>Quoi</reg></choice> rien ?</l>
+               <l>Qu’est-ce là ? Lu&i; dit-il. Rien. Quo&i; rien ?</l>
                <l rend="indent">Peu de chose.</l>
                <l>Mais <choice><orig>encor</orig><reg>encore</reg></choice> ? Le collier dont je suis attaché,</l>
-               <l>De ce que vous voyez est peut-<choice><orig>estre</orig><reg>être</reg></choice> la cause.</l>
+               <l>De ce que vous voyez est peut-&ê;tre la cause.</l>
             </lg>
             <lg rhyme="abab">
                <l>Attaché ? dit le Loup : Vous ne courez donc pas</l>
@@ -178,8 +190,8 @@
                <l rend="indent">Je ne veux en aucune sorte ;</l>
             </lg>
             <lg rhyme="aa">
-               <l>Et ne <choice><orig>voudrois</orig><reg>voudrais</reg></choice> pas <choice><orig>mesme</orig><reg>même</reg></choice> à ce prix un <choice><orig>tresor</orig><reg>trésor</reg></choice>.</l>
-               <l>Cela dit, <choice><orig>Maistre</orig><reg>Maître</reg></choice> Loup s’<choice><orig>enfuït</orig><reg>enfuit</reg></choice>, <choice><orig>&amp;</orig><reg>et</reg></choice> court <choice><orig>encor</orig><reg>encore</reg></choice>.</l>
+               <l>Et ne voudr&ai;s pas m&ê;me à ce prix un tr&é;sor.</l>
+               <l>Cela dit, Ma&i;tre Loup s’<choice><orig>enfuït</orig><reg>enfuit</reg></choice>, &et; court <choice><orig>encor</orig><reg>encore</reg></choice>.</l>
             </lg>
          </div>
       </body>
